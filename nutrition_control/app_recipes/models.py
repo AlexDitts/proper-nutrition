@@ -22,7 +22,7 @@ class Product(models.Model):
         verbose_name = 'продукт'
         verbose_name_plural = 'продукты'
 
-    title = models.CharField(max_length=1000)
+    title = models.CharField(max_length=1000, verbose_name='название')
     proteins = models.FloatField(verbose_name='белки')
     fats = models.FloatField(verbose_name='жиры')
     carbohydrates = models.FloatField(verbose_name='углеводы')

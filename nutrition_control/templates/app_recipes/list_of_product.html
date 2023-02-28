@@ -8,5 +8,6 @@
     {% for prod in object_list %}
         <li> <a href="{% url 'prod_detail' prod.pk%}">{{ prod.title }}</a> </li>
     {% endfor %}
+    <p><a href="{% url 'main' %}"> На главную страницу </a></p>
 </body>
 </html>
