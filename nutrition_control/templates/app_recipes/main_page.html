@@ -1,12 +1,27 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Правильное питание</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Proper nutrition</title>
+	<link type="text/css" rel="stylesheet" href="{% static 'app_recipes/css/style.css' %}">
 </head>
 <body>
-    <h1> Рады приветствовать вас на нашем сайте!!! </h1>
-    <p> <a href="{% url 'prod_list' %}"> Список родуктов </a> </p>
-    <p> <a href="{% url 'create_prod' %}"> Создать продукт </a> </p>
+	<div class="menu">
+		<div class="title"><h1>NAVIGATION</h1></div>
+		<div class="list_menu">
+			<ul>
+				<li><a href="{% url 'prod_list' %}">Список продуктов</a></li>
+				<li><a href="{% url 'create_prod' %}">Создать продукт</a></li>
+			</ul>
+		</div>
+		<div class="footer_menu">
+			<p>©Danik_rulit</p>
+		</div>
+	</div>
+	<div class="content">
+		<img width="100%" src="{% static 'app_recipes/images/background_main_page.jpg' %}" alt="">
+	</div>
 </body>
 </html>

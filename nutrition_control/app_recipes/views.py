@@ -22,3 +22,7 @@ class CreateProductView(generic.CreateView):
     model = Product
     form_class = ProductForm
     success_url = 'product_list'
+
+
+class TestView(generic.TemplateView):
+    template_name = 'base.html'
