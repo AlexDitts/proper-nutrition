@@ -1,4 +1,5 @@
 from django.db import models
+from app_recipes.models.managers import RecipeManager
 
 
 class Recipe(models.Model):
@@ -12,6 +13,7 @@ class Recipe(models.Model):
     fats = models.FloatField(verbose_name='жиры')
     carbohydrates = models.FloatField(verbose_name='углеводы')
     energy = models.FloatField(verbose_name='энергетическая ценность')
+    objects = RecipeManager()
 
     def __str__(self):
         return self.title
