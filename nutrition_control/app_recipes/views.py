@@ -1,6 +1,6 @@
 from django.views import generic
 from .forms import ProductForm
-from .models.models import Product
+from .models.models import Product, Recipe
 
 
 class MainPageView(generic.TemplateView):
