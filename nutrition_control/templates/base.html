@@ -7,33 +7,52 @@
     <link rel="stylesheet" href="{% static 'app_recipes/css/base_style.css' %}">
 </head>
 <body>
-    <header id="header">
+    <div id="header">
         <div class="head-buttons" onclick="window.location.href='/'">Главная</div>
         <div class="head-buttons" onclick="window.location.href='/product_list'">Список продуктов</div>
         <div class="head-buttons" onclick="window.location.href='/'">Личный кабинет</div>
-    </header>
+    </div>
+
 
     <div id="wrapper">
-        <header class="block-content" id="wrapper-head">
 
-        </header>
-
-        <div class="block-content" id="right-bar">
-            <div id="right-bar-head"></div>
+        <div class="block-content" id="wrapper-head">
+            {% block wrapper_head %}
+            {% endblock %}
         </div>
 
-        <div class="block-content" id="content">
-            <p>To create a footer in CSS, first create an element in your HTML code. Then, in your CSS stylesheet, define the styles for your footer. Common footer styles include setting the background color, adding padding or a border, and aligning the text to the center or right of the page. You can also add links or other content within the footer using HTML tags. Make sure to use proper CSS syntax and selectors to target the footer element specifically. Once you have defined the styles for your footer, save both your HTML and CSS files and view your webpage in a browser to see the changes. Note that the exact CSS code required may vary depending on the design and layout of your webpage. Все потоки СТАТЬ</p>
-        </div>
+
 
         <div class="block-content" id="left-bar">
-            <div id="left-bar-head"></div>
+
+            <div id="left-bar-head">
+                {% block right_bar_head %}
+                {% endblock %}
+            </div>
+
+            {% block right_bar %}
+            {% endblock %}
+        </div>
+
+
+        <div class="block-content" id="content">
+            {% block content %}
+            {% endblock %}
+        </div>
+
+
+        <div class="block-content" id="right-bar">
+            <div id="right-bar-head">
+                {% block left_bar_head %}
+                {% endblock %}
+            </div>
+            {% block left_bar %}
+            {% endblock %}
         </div>
 
     </div>
 
     <div id="footer">
-        <p>copyright best-nutrition</p>
         <div id="footer-contacts"></div>
     </div>
 </body>

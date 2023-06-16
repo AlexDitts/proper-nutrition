@@ -24,5 +24,10 @@ class CreateProductView(generic.CreateView):
     success_url = 'product_list'
 
 
+class RecipeListView(generic.ListView):
+    model = Recipe
+    template_name = 'app_recipes/list_of_recipes.html'
+
+
 class TestView(generic.TemplateView):
-    template_name = 'base.html'
+    template_name = 'app_recipes/recipe_card.html'

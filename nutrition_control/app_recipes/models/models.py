@@ -8,12 +8,13 @@ class Recipe(models.Model):
         verbose_name_plural = 'рецепты'
 
     title = models.CharField(max_length=1000, verbose_name='название')
-    image = models.ImageField(upload_to='', verbose_name='изображение')
+    image = models.ImageField(upload_to='recipes_img', verbose_name='изображение')
     proteins = models.FloatField(verbose_name='белки')
     fats = models.FloatField(verbose_name='жиры')
     carbohydrates = models.FloatField(verbose_name='углеводы')
     energy = models.FloatField(verbose_name='энергетическая ценность')
     objects = RecipeManager()
+    description = models.TextField(verbose_name='описание')
 
     def __str__(self):
         return self.title
