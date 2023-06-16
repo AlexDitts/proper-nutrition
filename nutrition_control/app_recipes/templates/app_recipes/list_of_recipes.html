@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+    {% for recipe in object_list %}
+        {% include 'app_recipes/recipe_card.html' %}
+    {% endfor %}
+{% endblock %}

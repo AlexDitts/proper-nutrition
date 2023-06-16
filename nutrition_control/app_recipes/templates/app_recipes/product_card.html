@@ -1,0 +1,5 @@
+<div id="content_card">
+    <h1>{{ prod.title }}</h1>
+    <p>энергетическая ценность: {{ prod.energy }}</p>
+    <a href="{% url 'prod_detail' prod.pk %}">подробнее</a>
+</div>
