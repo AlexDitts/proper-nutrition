@@ -1,8 +1,16 @@
-from django.forms import ModelForm
 from .models.models import Product
+from django import forms
 
 
-class ProductForm(ModelForm):
+class ProductForm(forms.ModelForm):
     class Meta:
         model = Product
         fields = '__all__'
+
+
+class ExcludeProductsForm(forms.ModelForm):
+    title = forms.MultipleChoiceField(choices=enumerate(Product.objects.all()))
+
+    class Meta:
+        model = Product
+        fields = ['title']

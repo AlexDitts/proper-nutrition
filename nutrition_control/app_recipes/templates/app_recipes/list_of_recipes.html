@@ -7,3 +7,20 @@
         {% include 'app_recipes/recipe_card.html' %}
     {% endfor %}
 {% endblock %}
+
+
+{% block right_bar_head %}
+    <form method="post">
+        {% csrf_token %}
+<!--        <select multiple size="1" style="box-sizing: border-box;-->
+<!--                                height: 100px;-->
+<!--                                width: 100%;-->
+<!--                                ">-->
+<!--                {% for prod in prod_list %}-->
+<!--                    <option value="{{ prod }}">{{ prod }}</option>-->
+<!--                {% endfor %}-->
+<!--            </select>-->
+        {{ form.title }}
+        <button type="submit">отправить</button>
+    </form>
+{% endblock %}
