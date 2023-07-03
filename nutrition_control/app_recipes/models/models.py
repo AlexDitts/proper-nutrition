@@ -1,5 +1,5 @@
 from django.db import models
-from app_recipes.models.managers import RecipeManager
+from .managers import RecipeManager
 
 
 class Recipe(models.Model):

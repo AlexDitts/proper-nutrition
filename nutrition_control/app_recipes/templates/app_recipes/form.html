@@ -5,7 +5,7 @@
     <title>Создать продукт</title>
 </head>
 <body>
-    <form method="post">
+    <form method="get">
         {% csrf_token %}
         {{ form.as_p }}
         <button type="submit">отправить</button>

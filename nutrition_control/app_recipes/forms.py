@@ -9,7 +9,7 @@ class ProductForm(forms.ModelForm):
 
 
 class ExcludeProductsForm(forms.ModelForm):
-    title = forms.MultipleChoiceField(choices=enumerate(Product.objects.all()))
+    title = forms.MultipleChoiceField(choices=[tuple(i.values()) for i in Product.objects.values('pk', 'title')])
 
     class Meta:
         model = Product
